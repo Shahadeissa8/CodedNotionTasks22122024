@@ -74,24 +74,5 @@ foreach (var item2 in smallArray)
     Console.Write(" " + item2);
 }
 
-Console.WriteLine("\n==============================bonus alternative solution=================================");
-
-Console.WriteLine("enter the number you want to find whats bigger than it in the array list: ");
-int number = Convert.ToInt32(Console.ReadLine()); // we are asking the user to enter the number to find whats bigger than it 
-Console.WriteLine("the number you entered is: " + number);
-foreach (var something in bigArray)
-{
-    if ((int)something > number)
-    {
-        Console.WriteLine("this number is bigger than the number you entered "+something);
-        smallArray.Add(something);
-    }
-}
-Console.Write("the numbers that are bigger than the number you entered are: ");
-foreach (var something2 in smallArray)
-{
-    Console.Write(" " + something2);
-
-}
 //extra note: we can make the user write the elements inside the array list
 #endregion
