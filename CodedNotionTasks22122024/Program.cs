@@ -20,7 +20,7 @@ myArray.Remove(1);
 
 Console.WriteLine("enter your search of fruits: ");
 string testingItem = Console.ReadLine().ToLower();
-if (myArray.Contains(testingItem))//first go to the list, then check inside that list if the testing item is availbe indside it
+if (myArray.Contains(testingItem))//first go to the list, then check inside that list if the testing item is avaiilable indside it
 {
     Console.WriteLine(myArray.IndexOf(testingItem));
     Console.WriteLine("the array list contains " + testingItem + " and has an index of " + myArray.IndexOf(testingItem));
@@ -34,7 +34,6 @@ foreach (var printing in myArray)
 {
     Console.WriteLine(printing);
 }
-int x;
 #endregion
 
 #region bonus
@@ -63,16 +62,35 @@ int threshold = 40;
 
 foreach (var item in bigArray) //looping around all the array list
 {
-if ((int)item > threshold) //casting the elements inside the array list to manage to compare it to an in integer
+if ((int)item > threshold) //casting the elements inside the array list to manage to compare it to an in integer same method used in alternative below
 {
 Console.WriteLine("number is bigger than 50 is " + item);
 smallArray.Add(item);
 }
 }
-Console.Write("the numbers in the second arraylist are: ");
+Console.Write("\nthe numbers in the second arraylist are: ");
 foreach (var item2 in smallArray)
 {
     Console.Write(" " + item2);
+}
+
+Console.WriteLine("\n==============================bonus alternative solution=================================");
+
+Console.WriteLine("enter the number you want to find whats bigger than it in the array list: ");
+int number = Convert.ToInt32(Console.ReadLine()); // we are asking the user to enter the number to find whats bigger than it 
+Console.WriteLine("the number you entered is: " + number);
+foreach (var something in bigArray)
+{
+    if ((int)something > number)
+    {
+        Console.WriteLine("this number is bigger than the number you entered "+something);
+        smallArray.Add(something);
+    }
+}
+Console.Write("the numbers that are bigger than the number you entered are: ");
+foreach (var something2 in smallArray)
+{
+    Console.Write(" " + something2);
 
 }
 //extra note: we can make the user write the elements inside the array list
