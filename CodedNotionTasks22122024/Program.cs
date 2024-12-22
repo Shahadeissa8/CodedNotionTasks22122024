@@ -20,7 +20,7 @@ myArray.Remove(1);
 
 Console.WriteLine("enter your search of fruits: ");
 string testingItem = Console.ReadLine().ToLower();
-if (myArray.Contains(testingItem))//first go to the list, then check inside that list if the testing item is avaiilable indside it
+if (myArray.Contains(testingItem))//first go to the list, then check inside that list if the testing item is available indside it
 {
     Console.WriteLine(myArray.IndexOf(testingItem));
     Console.WriteLine("the array list contains " + testingItem + " and has an index of " + myArray.IndexOf(testingItem));
